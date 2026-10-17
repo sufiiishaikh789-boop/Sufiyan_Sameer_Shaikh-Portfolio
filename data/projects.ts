@@ -23,6 +23,9 @@ export type Project = {
   testing?: string[]
   challenges?: string[]
   futureImprovements?: string[]
+  workflow?: string[]
+  security?: string[]
+  currentStatus?: string
   screenshots: { src: string; alt: string }[]
 }
 
@@ -87,42 +90,61 @@ export const projects: Project[] = [
   },
   {
     slug: 'restaurant-ordering-system',
-    title: 'Restaurant Ordering System',
-    subtitle: 'Web Application',
+    title: 'Table-Embedded Smart Restaurant Ordering System',
+    subtitle: 'Self-service ordering concept',
     summary:
-      'A web-based restaurant food ordering application developed as a Web Technology academic project. It supports a food-ordering workflow with cart management, checkout, order placement, confirmation, and order tracking.',
+      'A table-based self-service ordering solution designed to give restaurant customers time to explore menus, compare prices, customize meals, and order comfortably without feeling rushed at a counter or shared kiosk.',
     featured: false,
     technologies: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript', 'XAMPP'],
     features: [
-      'Browse available food items',
+      'Browse food items at the customer’s own pace',
+      'Explore menu choices instead of ordering under counter pressure',
       'Add items to a cart and manage quantities',
       'Review cart contents during checkout',
-      'Place food orders through the application workflow',
+      'Place food orders through the existing application workflow',
       'Show order confirmation after placement',
-      'Track order status',
+      'Track order status where supported by the backend',
     ],
-    github: 'https://github.com/sufiiishaikh789-boop/On_Table_Food_Ordering_Base',
+    github: 'https://github.com/sufiishaikh789-boop/On_Table_Food_Ordering_Base',
     overview:
-      'Restaurant Ordering System is a PHP and MySQL web application created for a Web Technology academic project. It models the customer journey from selecting food items through order placement, confirmation, and tracking.',
+      'This PHP and MySQL Web Technology project explores a table-embedded ordering experience: a customer sits at an assigned table, browses the menu privately, reviews a cart, and submits an order without needing to decide in front of a waiting counter or shared kiosk.',
     problem:
-      'A restaurant needs a structured digital ordering flow so customers can select food, review their cart, submit an order, and understand what happens after placement instead of relying on an informal or manual process.',
+      'Customers who are unsure what to order can feel rushed at a staffed counter, while a shared kiosk can make them uncomfortable when other customers are waiting. That pressure discourages menu exploration, price comparison, and thoughtful decisions.',
     solution:
-      'The application combines a browser-based interface with PHP server-side logic and a MySQL database. Customers can manage a cart, proceed through checkout, place an order, receive confirmation, and view order-tracking information.',
+      'The existing browser application provides the foundation for a table-based self-service flow. A stable table identifier can connect the customer session and resulting order to the correct table, while PHP and MySQL handle the ordering workflow, cart, checkout, confirmation, and tracking data.',
     architecture: [
       { name: 'Interface', description: 'HTML5, CSS3, and JavaScript provide the customer-facing food selection, cart, checkout, confirmation, and tracking screens.' },
       { name: 'Application logic', description: 'PHP handles the ordering workflow, including cart processing, checkout, order placement, confirmation, and tracking requests.' },
       { name: 'Database', description: 'MySQL stores the application data required by the ordering workflow and its order-tracking views.' },
       { name: 'Local runtime', description: 'XAMPP provides the local Apache and MySQL environment used to run and test the PHP application.' },
     ],
-    testing: ['Local testing with XAMPP and the project workflow'],
+    testing: ['Local testing with XAMPP and the existing project workflow'],
+    workflow: [
+      'Customer sits at an assigned table and identifies the table session.',
+      'Customer explores and filters the menu, then reviews ingredients, prices, and dietary labels that the data actually provides.',
+      'Customer customizes supported items, updates quantities, and reviews the itemized cart.',
+      'Checkout submits the order to the server for validation and associates it with the table.',
+      'The system generates an order confirmation and exposes tracking information where the backend supports it.',
+      'Restaurant staff can use the order details to prepare and deliver the order to the correct table.',
+    ],
+    security: [
+      'Use prepared SQL statements and server-side validation for table identifiers, item availability, quantities, and totals.',
+      'Do not treat browser-calculated totals or client-supplied payment states as verified transaction results.',
+      'Payment processing, staff authentication, and role-based authorization require confirmation in the source application before being described as implemented.',
+    ],
+    currentStatus:
+      'Academic/local implementation. The portfolio documents the table-embedded direction and existing ordering workflow; physical touchscreen deployment, production restaurant operations, and verified live payments are not claimed.',
     challenges: [
       'Connecting the cart, checkout, and order-placement stages into one consistent workflow.',
       'Designing database-backed order tracking while developing in a local PHP environment.',
+      'Separating implemented local behavior from the additional controls needed for a production table-ordering service.',
     ],
     futureImprovements: [
-      'Deploy the application to a hosted PHP and MySQL environment.',
-      'Add authenticated customer and staff accounts with role-based access.',
-      'Add production-ready payment integration and automated notifications after validation.',
+      'Add validated table provisioning instead of accepting arbitrary client-side table identifiers.',
+      'Add authenticated customer and staff accounts with server-side role-based access.',
+      'Add server-recalculated totals, transactional order creation, and idempotent submissions.',
+      'Integrate and verify Razorpay only when credentials, signature verification, and reconciliation are configured.',
+      'Deploy the application to a hosted PHP and MySQL environment with maintained menu and order data.',
     ],
     screenshots: [],
   },

@@ -127,6 +127,28 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               <p>{project.solution}</p>
             </DetailSection>
           ) : null}
+          {project.workflow?.length ? (
+            <DetailSection title="Customer journey">
+              <ol className="grid gap-3 sm:grid-cols-2">
+                {project.workflow.map((step, index) => (
+                  <li key={step} className="flex gap-4 rounded-xl border border-border bg-card p-4">
+                    <span className="font-mono text-xs text-primary">{String(index + 1).padStart(2, '0')}</span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
+            </DetailSection>
+          ) : null}
+          {project.currentStatus ? (
+            <DetailSection title="Current status">
+              <p>{project.currentStatus}</p>
+            </DetailSection>
+          ) : null}
+          {project.security?.length ? (
+            <DetailSection title="Security considerations">
+              <CheckList items={project.security} />
+            </DetailSection>
+          ) : null}
           {project.architecture?.length ? (
             <DetailSection title="Technical architecture">
               <ol className="grid gap-3">
