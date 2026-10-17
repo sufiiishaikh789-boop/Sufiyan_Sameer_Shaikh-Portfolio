@@ -105,7 +105,7 @@ export const projects: Project[] = [
       'Show order confirmation after placement',
       'Track order status where supported by the backend',
     ],
-    github: 'https://github.com/sufiishaikh789-boop/On_Table_Food_Ordering_Base',
+    github: 'https://github.com/sufiiishaikh789-boop/On_Table_Food_Ordering_Base',
     overview:
       'This PHP and MySQL Web Technology project explores a table-embedded ordering experience: a customer sits at an assigned table, browses the menu privately, reviews a cart, and submits an order without needing to decide in front of a waiting counter or shared kiosk.',
     problem:
