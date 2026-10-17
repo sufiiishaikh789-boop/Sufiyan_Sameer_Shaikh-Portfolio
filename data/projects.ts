@@ -21,6 +21,8 @@ export type Project = {
   architecture?: ArchitectureLayer[]
   gpu?: string[]
   testing?: string[]
+  challenges?: string[]
+  futureImprovements?: string[]
   screenshots: { src: string; alt: string }[]
 }
 
@@ -86,11 +88,42 @@ export const projects: Project[] = [
   {
     slug: 'restaurant-ordering-system',
     title: 'Restaurant Ordering System',
-    subtitle: 'Web application',
-    summary: 'A restaurant ordering website built with PHP on a XAMPP stack, backed by a database and integrated with Razorpay for payments.',
+    subtitle: 'Web Application',
+    summary:
+      'A web-based restaurant food ordering application developed as a Web Technology academic project. It supports a food-ordering workflow with cart management, checkout, order placement, confirmation, and order tracking.',
     featured: false,
-    technologies: ['PHP', 'XAMPP', 'Database', 'Razorpay'],
-    features: [],
+    technologies: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript', 'XAMPP'],
+    features: [
+      'Browse available food items',
+      'Add items to a cart and manage quantities',
+      'Review cart contents during checkout',
+      'Place food orders through the application workflow',
+      'Show order confirmation after placement',
+      'Track order status',
+    ],
+    github: 'https://github.com/sufiishaikh789-boop/On_Table_Food_Ordering_Base',
+    overview:
+      'Restaurant Ordering System is a PHP and MySQL web application created for a Web Technology academic project. It models the customer journey from selecting food items through order placement, confirmation, and tracking.',
+    problem:
+      'A restaurant needs a structured digital ordering flow so customers can select food, review their cart, submit an order, and understand what happens after placement instead of relying on an informal or manual process.',
+    solution:
+      'The application combines a browser-based interface with PHP server-side logic and a MySQL database. Customers can manage a cart, proceed through checkout, place an order, receive confirmation, and view order-tracking information.',
+    architecture: [
+      { name: 'Interface', description: 'HTML5, CSS3, and JavaScript provide the customer-facing food selection, cart, checkout, confirmation, and tracking screens.' },
+      { name: 'Application logic', description: 'PHP handles the ordering workflow, including cart processing, checkout, order placement, confirmation, and tracking requests.' },
+      { name: 'Database', description: 'MySQL stores the application data required by the ordering workflow and its order-tracking views.' },
+      { name: 'Local runtime', description: 'XAMPP provides the local Apache and MySQL environment used to run and test the PHP application.' },
+    ],
+    testing: ['Local testing with XAMPP and the project workflow'],
+    challenges: [
+      'Connecting the cart, checkout, and order-placement stages into one consistent workflow.',
+      'Designing database-backed order tracking while developing in a local PHP environment.',
+    ],
+    futureImprovements: [
+      'Deploy the application to a hosted PHP and MySQL environment.',
+      'Add authenticated customer and staff accounts with role-based access.',
+      'Add production-ready payment integration and automated notifications after validation.',
+    ],
     screenshots: [],
   },
 ]

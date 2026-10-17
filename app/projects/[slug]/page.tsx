@@ -160,6 +160,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               <CheckList items={project.testing} />
             </DetailSection>
           ) : null}
+          {project.challenges?.length ? (
+            <DetailSection title="Challenges & learning">
+              <CheckList items={project.challenges} />
+            </DetailSection>
+          ) : null}
+          {project.futureImprovements?.length ? (
+            <DetailSection title="Future improvements">
+              <CheckList items={project.futureImprovements} />
+            </DetailSection>
+          ) : null}
           <DetailSection title="Screenshots">
             {project.screenshots.length ? (
               <div className="grid gap-4 sm:grid-cols-2">
