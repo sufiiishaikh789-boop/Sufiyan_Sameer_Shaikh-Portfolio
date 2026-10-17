@@ -101,7 +101,7 @@ export const projects: Project[] = [
       'Show order confirmation after placement',
       'Track order status',
     ],
-    github: 'https://github.com/sufiishaikh789-boop/On_Table_Food_Ordering_Base',
+    github: 'https://github.com/sufiiishaikh789-boop/On_Table_Food_Ordering_Base',
     overview:
       'Restaurant Ordering System is a PHP and MySQL web application created for a Web Technology academic project. It models the customer journey from selecting food items through order placement, confirmation, and tracking.',
     problem:
