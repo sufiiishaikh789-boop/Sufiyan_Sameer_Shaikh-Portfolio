@@ -56,7 +56,7 @@ export function Navbar({ basePath = '' }: { basePath?: string }) {
     <header
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-all duration-300',
-        scrolled || open ? 'border-b border-border bg-background/80 backdrop-blur-xl' : 'border-b border-transparent',
+        scrolled || open ? 'border-b border-border bg-background/80 backdrop-blur-xl' : 'border-b border-transparent bg-background/35 backdrop-blur-md',
       )}
     >
       <nav aria-label="Primary" className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5 md:px-8">

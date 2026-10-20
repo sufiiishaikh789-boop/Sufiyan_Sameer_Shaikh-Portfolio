@@ -36,7 +36,7 @@ export function Projects() {
 
         {featured ? (
           <Reveal>
-            <article className="group/feature relative overflow-hidden rounded-[2rem] border border-border bg-card p-6 md:p-10">
+            <article className="group/feature relative overflow-hidden rounded-[2rem] border border-primary/20 bg-card/75 p-6 shadow-[0_24px_80px_-38px] shadow-primary/40 backdrop-blur-sm md:p-10">
               <div
                 className="absolute -top-32 -right-32 size-96 rounded-full bg-primary/10 blur-3xl transition-opacity duration-700 group-hover/feature:opacity-150"
                 aria-hidden="true"
