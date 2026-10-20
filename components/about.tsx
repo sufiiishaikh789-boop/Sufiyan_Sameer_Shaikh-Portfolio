@@ -6,7 +6,8 @@ import { SectionHeading } from '@/components/section-heading'
 
 export function About() {
   return (
-    <section id="about" aria-labelledby="about-title" className="px-5 py-24 md:px-8 md:py-32">
+    <section id="about" aria-labelledby="about-title" className="relative overflow-hidden bg-secondary/35 px-5 py-24 md:px-8 md:py-32">
+      <div className="pointer-events-none absolute -top-24 right-[-6rem] size-72 rounded-full border border-primary/15" aria-hidden="true" />
       <div className="mx-auto max-w-7xl">
         <SectionHeading id="about-title" index="01" eyebrow="About" title="A little about me" />
 

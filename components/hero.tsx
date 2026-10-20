@@ -38,7 +38,7 @@ export function Hero() {
       ref={sectionRef}
       onPointerMove={onPointerMove}
       aria-labelledby="hero-title"
-      className="relative isolate flex min-h-svh items-center overflow-hidden pt-24 pb-20 md:pt-28"
+      className="relative isolate flex min-h-svh items-center overflow-hidden bg-[radial-gradient(circle_at_80%_20%,color-mix(in_oklch,var(--accent)_42%,transparent),transparent_32%),linear-gradient(135deg,color-mix(in_oklch,var(--background)_90%,var(--accent)),var(--background))] pt-24 pb-20 md:pt-28"
     >
       <div className="bg-grid absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" aria-hidden="true" />
       <div

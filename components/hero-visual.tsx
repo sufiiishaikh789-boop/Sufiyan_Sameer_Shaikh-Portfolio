@@ -104,7 +104,7 @@ export function HeroVisual({ pointer }: { pointer: Pointer }) {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.3 }}
         >
-          <OrbScene primary={dark ? '#d58a61' : '#C66A43'} violet={dark ? '#b97b5c' : '#9d5739'} />
+          <OrbScene primary={dark ? '#a8c985' : '#527a52'} violet={dark ? '#d1b889' : '#a88d62'} />
         </motion.div>
       ) : null}
 
