@@ -89,6 +89,28 @@ export const projects: Project[] = [
     screenshots: [],
   },
   {
+    slug: 'ai-faculty-login-logout-management',
+    title: 'AI-Based Faculty Login-Logout Management',
+    subtitle: 'Android Application · Academic Project',
+    summary:
+      'A Java-based Android application concept for managing faculty login and logout activity and organizing attendance-related records.',
+    featured: false,
+    technologies: ['Java', 'Android'],
+    features: [
+      'Faculty login and logout activity management',
+      'Organization of attendance-related records',
+    ],
+    github: 'https://github.com/sufiiishaikh789-boop/Ai-Based-Faculty-Login-Logut-Management',
+    overview:
+      'An academic software project focused on faculty login and logout time management and attendance-related record organization.',
+    problem:
+      'Faculty login and logout activity can be difficult to organize consistently when attendance-related records are maintained manually.',
+    solution:
+      'A Java-based Android application concept exploring a more organized digital approach to faculty login/logout tracking.',
+    currentStatus: 'Academic project. Additional implementation details are not claimed without verified source information.',
+    screenshots: [],
+  },
+  {
     slug: 'restaurant-ordering-system',
     title: 'Table-Embedded Smart Restaurant Ordering System',
     subtitle: 'Self-service ordering concept',
