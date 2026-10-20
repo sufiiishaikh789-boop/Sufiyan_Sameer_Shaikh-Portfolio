@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, ArrowUpRight, Check, Plus } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Check } from 'lucide-react'
 import { projects } from '@/data/projects'
 import { SectionHeading } from '@/components/section-heading'
 import { Reveal } from '@/components/reveal'
@@ -124,15 +124,6 @@ export function Projects() {
             </Reveal>
           ))}
 
-          <Reveal delay={0.16} className="h-full md:col-span-2 lg:col-span-1">
-            <div className="flex h-full min-h-56 flex-col items-center justify-center rounded-[1.5rem] border border-dashed border-border p-8 text-center">
-              <span className="flex size-10 items-center justify-center rounded-full bg-muted text-muted-foreground">
-                <Plus className="size-4" aria-hidden="true" />
-              </span>
-              <p className="mt-4 font-medium">More projects on the way</p>
-              <p className="mt-1 text-sm text-muted-foreground">New work will be added here as it ships.</p>
-            </div>
-          </Reveal>
         </div>
       </div>
     </section>
